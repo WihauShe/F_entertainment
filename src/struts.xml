@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN" "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<constant name="struts.enable.DynamicMethodInvocation" value="false" />
+    <constant name="struts.devMode" value="false" />
+    <constant name="struts.multipart.saveDir" value="/tmp"/>
+    <constant name="struts.multipart.maxSize" value="55000000"/>
+    <package name="basePackage" extends="struts-default" namespace="/">
+		<interceptors>
+			<interceptor name="loginIntercepetor" class="com.interceptor.LoginInterceptor"></interceptor>
+			<interceptor-stack name="myStack">
+                <interceptor-ref name="loginIntercepetor"></interceptor-ref>
+                <interceptor-ref name="defaultStack"></interceptor-ref>
+            </interceptor-stack>
+		</interceptors>
+		<global-results>
+            <result name="error">/error.jsp</result>
+            <result name="login">/login.html</result>
+        </global-results>
+        <action name="enter" class="com.action.EnterIndexAction">
+        	<result>/main.jsp</result>
+        </action>
+        <action name="enterAdmin" class="com.action.EnterAdminAction">
+        	<interceptor-ref name="myStack"></interceptor-ref>
+			<result>/index_admin.jsp</result>
+        </action>
+        <action name="person" class="com.action.PersonalSpaceAction">
+        	<result>/person.jsp</result>
+        </action>
+        <action name="register" class="com.action.RegisterAction">
+        	<result>/login.html</result>
+        	<result name="error">/sign_up.html</result>
+        </action>
+        <action name="testUseremail" class="com.action.TestUseremailAction"></action>
+		<action name="login" class="com.action.LoginAction"></action>
+		<action name="logout" class="com.action.LogoutAction">
+			<result type="redirect">/enter</result>
+		</action>
+		<action name="changePass" class="com.action.ChangePassAction"></action>
+		<action name="updateSig" class="com.action.UpdateSigAction">
+			<interceptor-ref name="myStack"></interceptor-ref>
+		</action>
+		<action name="updateUser" class="com.action.UpdateUserAction">
+			<interceptor-ref name="myStack"></interceptor-ref>
+			<result type="redirect">/person</result>
+		</action>
+		<action name="addJokeLike" class="com.action.AddJokeLikeAction"></action>
+		<action name="addMusicLike" class="com.action.AddMusicLikeAction"></action>
+		
+		<action name="getUsername" class="com.action.GetUsernameAction">
+			<interceptor-ref name="myStack"></interceptor-ref>
+		</action>
+		<action name="addJokeComment" class="com.action.AddCommentAction">
+			<interceptor-ref name="myStack"></interceptor-ref>
+			<result>/person.jsp</result>
+		</action>
+		
+		<action name="addJokeReport" class="com.action.AddJokeReportAction">
+			<interceptor-ref name="myStack"></interceptor-ref>
+		</action>
+		<action name="addMusicReport" class="com.action.AddMusicReportAction">
+			<interceptor-ref name="myStack"></interceptor-ref>
+		</action>
+		<action name="upload" class="com.action.FileUploadActiion">
+			<interceptor-ref name="myStack"></interceptor-ref>
+			<interceptor-ref name="fileUpload">                
+              <param name="maximumSize">52428800</param>                
+        	</interceptor-ref>
+			<result>/success.html</result>
+		</action>
+		
+		<action name="sendCode" class="com.action.SendCodeAction"></action>
+		
+		<action name="deleteJoke" class="com.action.DeleteJokeAction">
+			<interceptor-ref name="myStack"></interceptor-ref>
+		</action>
+		<action name="deleteMusic" class="com.action.DeleteMusicAction">
+			<interceptor-ref name="myStack"></interceptor-ref>
+		</action>
+		<action name="deleteReport" class="com.action.DeleteReportAction">
+			<interceptor-ref name="myStack"></interceptor-ref>
+		</action>
+		<action name="searchResult" class="com.action.SearchResultAction">
+			<result>/search_results.jsp</result>
+		</action>
+		
+    </package>
+	
+</struts>

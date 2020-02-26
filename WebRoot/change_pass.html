@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Forget_password</title>
+		<link rel="icon" href="img/F.ico" type="image/x-icon"/>
+		<link rel="stylesheet" type="text/css" href="css/sign_up.css"/>
+		<link rel="stylesheet" type="text/css" href="css/change_pass.css"/>
+	</head>
+	<body>
+		<div class="wrap">
+			<a class="header" href="person"> &lt; Return person info</a>
+			<div class="box">
+				
+				<form>
+					<div class="Changetitle">F Entertainment</div>
+					<div class="form-group yanz" id="yanzZeng">
+						<input name="code" type="text" class="form-control  yz" id="yz" placeholder="verification code" onblur="checkYanz()">
+						<a href="javascript:;" data-click="1" class="send" id="sendCode">Send code</a>
+						<div id="yanzError" class="errorMsg">verification code is null or error!</div>
+					</div>
+					<div class="form-group password" id="passZeng">
+						<input type="password" class="form-control" name="userPasswd" id="passwd" onblur="checkNewPass()"
+							placeholder="new password">
+						<div id="passError" class="errorMsg">password must be between 6 and 16 bits and contain two types of
+						letters, numbers, or symbols!</div>
+					</div>
+					<div class="form-group re" id="repassZeng">
+						<input type="password" class="form-control" name="repasswd" id="repasswd" placeholder="confirm new password">
+						<div id="repassError" class="errorMsg">password is not same to up!</div>
+					</div>
+					<button type="button" class="btn"  onclick="checkChange()">Submit</button>
+					<button type="button" id="input_submit" style="display:none;"></button>
+				</form>
+			</div>
+		</div>	
+	</body>
+	<script src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/sign_up.js"></script>
+	<script type="text/javascript" src="js/change_pass.js"></script>
+</html>

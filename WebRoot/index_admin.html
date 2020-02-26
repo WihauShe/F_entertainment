@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Entertainment</title>
+		<link rel="stylesheet" type="text/css" href="css/index_admin.css" />
+	</head>
+	<body>
+		<nav>
+			<h1>F Entertainment</h1>
+			<ul>
+				<a href="#" onclick="showIndex()"><li id="one">Index</li></a>
+				<a href="#" onclick="showMusic()"><li id="two">Music</li></a>
+				<a href="#" onclick="showJoke()"><li id="three">Joke</li></a>
+				<a href="#" onclick="showReport()"><li id="four">Reported</li></a>
+			</ul>
+			<div class="login_content">
+				<span><a href="login.html">Sign In</a></span>
+				<span><a href="sign_up.html">Sign Up</a></span>
+			</div>
+			<div class="search">
+				<input type="text" /><a href="#"><img src="img/search.png"/></a>
+			</div>
+			<div class="nav_bottom">
+				<span>&copy;Copyright Reserved By XYZ</span>
+			</div>
+		</nav>
+		<section>
+			<div class="index_content" id="text">
+				<span>Entertainments start from Here</span>
+			</div>
+			<div class="index_music" id="music">
+				<div class="music_s">
+					<span class="music_title">Believer.mp3</span>
+					<audio src="musics/Believer.mp3" controls="controls"></audio>
+					<span class="music_delete"><a href="#">Delete</a></span>
+				</div>
+				<div class="music_s">
+					<span class="music_title">That girl.mp3</span>
+					<audio src="musics/Believer.mp3" controls="controls"></audio>
+					<span class="music_delete"><a href="#">Delete</a></span>
+				</div>
+				<div class="music_s">
+					<span class="music_title">Ferrari.mp3</span>
+					<audio src="musics/Believer.mp3" controls="controls"></audio>
+					<span class="music_delete"><a href="#">Delete</a></span>
+				</div>
+				<div class="music_s">
+					<span class="music_title">Hey Jude.mp3</span>
+					<audio src="musics/Believer.mp3" controls="controls"></audio>
+					<span class="music_delete"><a href="#">Delete</a></span>
+				</div>
+			</div>
+			<div class="index_joke" id="joke">
+				<div class="joke_s">
+					<p>
+						如果你得罪了老板，失去的只是一份工作；如果你得罪了客户，失去的不过是一份订单；是的，世上只有一个人可以得罪：你给她脸色看，你冲她发牢骚，你大声顶撞她，甚至当 着她的面摔碗，她都不会记恨你，原因很简单，因为她是你的母亲。
+					</p>
+					<span> 
+						<i class="icon">&#10084;</i><b>23</b>
+    						<a href="#">Comment</a>
+    						<a href="#">Delete</a>
+					</span>
+					<div class="comment">
+						<ul>
+							<li>username:haha</li>
+							<li><hr/></li>
+							<li>username:ssdsafa</li>
+							<li><hr/></li>
+							<li>username:awr</li>
+						</ul>
+					</div>
+				</div>
+				<div class="joke_s">
+					<p>
+						悟空和唐僧一起上某卫视非诚勿扰,悟空上台,24盏灯全灭。理由:1.没房没车只有一根破棍. 2.保镖职业危险.3.动不动打妖精,对女生不温柔. 4.坐过牢,曾被压五指山下500年。唐僧上台，哗!灯全亮。 理由:1.公务员； 2.皇上兄弟，后台最硬 3.精通梵文等外语 4.长得帅 5.最关键一点：有宝马！
+					</p>
+					<span> 
+	        				<i  class="icon">&#10084;</i><b>24</b>
+	    					<a href="#">Comment</a>
+	    					<a href="#">Delete</a>
+					</span>
+				</div>
+			</div>
+			<div class="index_report" id="report">
+				<div class="report_s">
+					
+				</div>
+			</div>
+		</section>
+	</body>
+	<script src="js/index_admin.js"></script>
+	<script src="js/jquery.min.js"></script>
+	<script>
+		$(function () {            
+            $(".icon").click(function () {
+                $(this).toggleClass('cs');
+            })
+		})
+	</script>
+</html>

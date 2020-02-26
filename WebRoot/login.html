@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>login</title>
+<link rel="icon" href="img/F.ico" type="image/x-icon"/>
+<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+<link rel="stylesheet" type="text/css" href="css/demo.css" />
+<link rel="stylesheet" type="text/css" href="css/component.css" />
+<script src="js/html5.js"></script>
+</head>
+	<body>
+		<div class="container demo-1">
+			<div class="content">
+				<div id="large-header" class="large-header">
+					<h1><a href="index.html">F Entertainment</a></h1>
+					<canvas id="demo-canvas"></canvas>
+					<div class="logo_box">
+						<h3>Welcome</h3>
+						<form>
+							<div class="input_outer">
+								<span class="u_user"></span>
+								<input name="userEmail" class="text" style="color: #FFFFFF !important" type="text" placeholder="Please input the account" id="username">
+							</div>
+							<div class="input_outer">
+								<span class="us_uer"></span>
+								<input name="userPassword" class="text" style="color: #FFFFFF !important; position: absolute; z-index: 100;" type="password" placeholder="Please input the password" id="password">
+							</div>
+							<div style="margin-left:40px;margin-bottom:15px;color:red;"><span id="tip"></span></div>
+							<div class="mb2"><button type="button" class="btn" value="input_button" onclick="checkChange()" id="login">Sign In</button></div>
+							<div class="mb2"><a href="sign_up.html">Sign Up</a><a href="forget_pass.html">Forget Password</a></div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div><!-- /container -->
+	</body>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/TweenLite.min.js"></script>
+	<script src="js/EasePack.min.js"></script>
+	<script src="js/rAF.js"></script>
+	<script src="js/demo-1.js"></script>
+</html>

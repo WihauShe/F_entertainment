@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/person.css"/>
+		<link rel="stylesheet" type="text/css" href="css/sign_up.css"/>
+		<script type="text/javascript" src="js/person.js"></script>
+		<script type="text/javascript" src="js/sign_up.js"></script>
+	</head>
+	<body>
+		<div class="wrap">
+			<header>
+				<h1>Personal HomePage
+					<div class="username" id="username">Username</div>
+					<form action="#" method="post">
+						<input class="signature" name="signature" id="signature" placeholder="Edit personal signature" onblur="checkSub()">
+						<button type="submit" class="btn" id="input_submit" style="display:none"></button>  
+						<!-- input失去焦点时提交 --> 
+					</form>
+				</h1>
+				<div class="credit" name="credit" id="credit">Credit:</div>
+			</header>
+			<!-- 第一个页面开始 -->
+			<div class="page1" id="page1">
+				<div class="main_head">
+					<div class="personal">
+						Personal Infomation
+					</div>
+					<button type="button" class="edit" onclick="goPage2()">Edit</button>
+				</div>
+				<div class="base_info">
+					<div class="item">
+						<div class="col_01">Email</div>
+						<div class="col_02">1339820761@qq.com</div>
+						<a href="change_pass.html" class="change">Change password</a>
+					</div>
+					<div class="item">
+						<div class="col_01">Username</div>
+						<div class="col_02">1111</div>
+					</div>
+					<div class="item">
+						<div class="col_01">Sex</div>
+						<div class="col_02">111</div>
+					</div>
+					<div class="item">
+						<div class="col_01">Birthdate</div>
+						<div class="col_02">111</div>
+					</div>
+					<div class="item">
+						<div class="col_01"></div>
+						<div class="col_02"></div>
+					</div>
+				</div>
+			</div>
+			<!-- 第一个页面结束 -->
+			
+			<!-- 第二个页面开始 -->
+			<div class="page2" id="page2" style="display: none;">
+				<form action="person.html" method="post">
+					<div class="form-group userName" id="nameZeng">
+						<label for="user_name">Username:</label>
+						<input type="text" class="form-control" name="userName" id="name" onblur="checkName()">
+						<div id="usernameError" class="errorMsg">Username can not be none!</div>
+					</div>
+					<div class="form-group sex">
+						<label>Sex:</label>
+						<input type="radio" name="userSex" value="male" checked="checked">Male
+						<input type="radio" name="userSex" value="female">Female
+					</div>
+					<div class="form-group userBirth" id="birthZeng" style="padding-right: 7.5px;">
+						<label for="birth">Birthdate:</label>
+						<div class="col">
+							<input type="text" name="day" id="day" placeholder="day" onblur="checkDay()">
+						</div>
+						<div class="col">
+							<input type="text" name="month" id="month" placeholder="month" onblur="checkMonth()">
+						</div>
+						<div class="col">
+							<input type="text" name="year" id="year" placeholder="year" onblur="checkYear()">
+						</div>
+						<div id="yearError" class="errorMsg col_1">Please input valid year!</div>
+						<div id="monthError" class="errorMsg col_2">Please input valid month!</div>
+						<div id="dayError" class="errorMsg col_3">Please input valid day!</div>
+					</div>
+					<button type="button" class="btn" value="input_button" onclick="checkEdit()">Sign up</button>
+					<button type="submit" value="input_submit" id="input_submit" style="display:none;"></button>
+					<div class="mybtn">
+						
+						<button type="button" class="back_btn" onclick="backPage1()">Back</button>
+						<button type="reset" value="reset" class="rebtn">Reset</button>
+					</div>
+					
+				</form>
+			</div>
+			<!-- 第二个页面结束 -->
+			
+			
+		</div>
+	</body>
+</html>

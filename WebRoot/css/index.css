@@ -1,0 +1,221 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: "宋体","楷体",helvetica,sans-serif; 
+}
+a{
+	text-decoration: none;
+}
+nav{
+	width: 30%;
+	height: 750px;
+	float:left;
+	background: #000;
+}
+h1{
+	margin-left: 20%;
+	padding-top: 20px;
+	color: #fff;
+	font-size: 30px;
+	font-weight: bolder;
+}
+nav ul a{
+	color: #fff;
+}
+nav ul li:hover{
+	background-color: #E6E6E6;
+}
+nav ul{
+	list-style: none;
+	padding-top: 50px;
+	padding-left: 5%;
+	padding-right: 5%;
+}
+nav ul li{
+	text-align: center;
+	line-height: 50px;
+}
+#one{
+	background-color: #E6E6E6;
+}
+.login_content{
+	padding-top: 10%;
+	margin-left: 30%;
+	margin-right: 0%;
+}
+.login_content span{
+	color:#FFFFFF;
+}
+.login_content a{
+	color: #FFFFFF;
+	margin-left: 5%;
+}
+.login_content a:hover{
+	color: #C0C0C0;
+}
+.search{
+	padding-top: 200px;
+	margin-left: 25%;
+	margin-right: 0%;
+}
+.search input{
+	width: 200px;
+	height: 25px;
+}
+.search button{
+	background-color:transparent;
+	border:none;
+	outline:none;
+}
+.search img{
+	position: relative;
+	width: 25px;
+	height: 27px;
+	top: 8px;
+}
+.nav_bottom{
+	margin-top:21%;
+	margin-left: 26%;
+}
+.nav_bottom>span{
+	color: #fff;
+	font-family: "微软雅黑";
+	font-size: 15px;
+}
+section{
+	width: 70%;
+	height: 750px;
+	float: left;
+	background-image: url(../img/starry.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+		overflow: hidden;
+}
+section>.index_content{
+	width: 500px;
+	height: 200px;
+	text-align: center;
+	margin-top: 300px;
+	margin-left: 260px;
+}
+.index_content span{
+	color: #E6E6E6;
+	font-size: 40px;
+	font-family: "宋体";
+}
+.index_music,.index_joke,.index_share{
+	margin-left: 20%;
+	margin-top: 5%;
+	width: 65%;
+	height: 100%;
+	background: rgba(192,192,192,0.2);
+	overflow: scroll;
+	display: none;
+}
+.music_s{
+	margin-top: 2%;
+	padding-left: 8%;
+	width: 90%;
+	height: 80px;
+}
+.music_s .music_title{
+	margin-left: 20px;
+	color: #FFFFFF;
+	font-size: 15px;
+}
+.music_s audio{
+	width: 86%;
+	height: 80%;
+}
+.music_s span a{
+	color: red;
+	font-weight: bold;
+}
+
+.joke_s{
+	padding-top: 20px;
+	padding-left: 4%;
+	padding-right: 4%;
+	text-align: right;
+}
+.joke_s>p{
+	text-align: left;
+	color: #FFFFFF;
+	text-indent: 2em;
+}
+.micon {
+    cursor: pointer;
+    color:#ccc;
+    font-size: 18px;
+}
+.jicon {
+    cursor: pointer;
+    color:#ccc;
+    font-size: 18px;
+}
+.cs{
+	color: #f00;
+}
+b{
+	color: #FFFFFF;
+	margin-left: 1%;
+	margin-right: 1%;
+}
+.joke_s span a{
+	color: #FFFFFF;
+}
+.btn_report{
+	color: red !important;
+	font-weight: bold;
+}
+
+.comment ul{
+	text-align: left;
+	background: rgba(255,255,255,0.5);
+	list-style: none;
+	padding-left: 5%;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+.comment ul li{
+	line-height: 20px;
+}
+.btn{
+	width:20%;
+	height:30px;
+	line-height: 30px;
+	border-radius: 10px;
+	margin-left:10%;
+	margin-top:5%;
+	border:rgba(255,255,255,0.2) 2px solid !important;
+	outline:none;
+	background-color:rgba(255,255,255,0.2);
+	color:white;
+	font-size:18px;
+}
+.share_content{
+	width: 90%;
+	height: 40%;
+	margin-left: 6%;
+}
+.upPicture,.upMusic{
+	display: inline;
+}
+.share_content input[type=file]{
+	position:absolute;
+	top:0;
+	left:0;
+	font-size:34px; 
+	opacity:0;
+}
+.share_content textarea{
+	width: 70%;
+	height: 90%;
+	margin-left:15%;
+	margin-top: 5%;
+	font-size: 20px;
+}
+.share_content input[type=submit]{
+	float:right;
+}
